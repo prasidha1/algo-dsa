@@ -16,6 +16,7 @@ from itertools import combinations
 def test(val):
     return sum(val) == targetSum
 
-res = list(filter(test, list(combinations(array,3))))
+res = list(filter(test, combinations(array,3)))
 
-print (res)
+subarray = [sorted(list(item)) for item in res]
+print (subarray)
