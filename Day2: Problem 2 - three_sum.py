@@ -11,3 +11,11 @@ targetSum = 0
 Sample Output
 [[-8, 2, 6], [-8, 3, 5], [-6, 1, 5]]
 """
+from itertools import combinations
+
+def test(val):
+    return sum(val) == targetSum
+
+res = list(filter(test, list(combinations(array,3))))
+
+print (res)
